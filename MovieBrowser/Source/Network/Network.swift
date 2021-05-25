@@ -15,7 +15,7 @@ class Network {
     func downloadMovieInfo(searchPhrase:String, responseHandler: @escaping NetworkResponseHandler){
         let movieSearchResponseHandler = responseHandler
         
-        guard let url = URL(string: "\(MovieDBAPI.searchQueryUrl)\(MovieDBAPI.apiKey)&query=\(searchPhrase.replacingOccurrences(of: " ", with: "%20"))") else{
+        guard let url = URL(string: "\(MovieDBAPI.searchQueryUrl.rawValue)\(MovieDBAPI.apiKey.rawValue)&query=\(searchPhrase.replacingOccurrences(of: " ", with: "%20"))") else{
             print("Unable to get URL from string.")
             return
         }
