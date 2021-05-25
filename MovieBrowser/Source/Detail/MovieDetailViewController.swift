@@ -26,7 +26,7 @@ class MovieDetailViewController: UIViewController {
     }
     
     func getPosterImageFrom(path: String) {
-        guard let url = URL(string: "\(MovieDBAPI.imageDownloadUrl)\(path)") as URL? else {
+        guard let url = URL(string: "\(MovieDBAPI.imageDownloadUrl.rawValue)\(path)") as URL? else {
             return
         }
         
